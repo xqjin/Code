@@ -37,9 +37,9 @@ typedef float real;                    // Precision of float numbers
 //codelen，该基本词的哈弗曼码的长度
 
 struct vocab_word {
-  long long cn;
+  long long cn;  //记录这个单词在语聊库中出现的次数
   int *point;
-  char *word, *code, codelen;
+  char *word, *code, codelen; //记录这个单词的token，编码已经编码的长度
 };
 
 char train_file[MAX_STRING], output_file[MAX_STRING];
@@ -102,11 +102,11 @@ void ReadWord(char *word, FILE *fin) {
   int a = 0, ch;
   while (!feof(fin)) {
     ch = fgetc(fin);
-    if (ch == 13) continue;
+    if (ch == 13) continue;  //回车
     if ((ch == ' ') || (ch == '\t') || (ch == '\n')) {
       if (a > 0) {
-        if (ch == '\n') ungetc(ch, fin);
-        break;
+        if (ch == '\n') ungetc(ch, fin); // 把ch字符退回到文件流中
+        break;  // 一个单词读写完成
       }
       if (ch == '\n') {
         strcpy(word, (char *)"</s>");
