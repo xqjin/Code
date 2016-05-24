@@ -1,0 +1,15 @@
+CateConf    RestaurantConf
+CateEntity  RestaurantEntity
+CateEntityRank  RestaurantEntityRank
+CateFrame   RestaurantFrame
+CateNlgResult   RestaurantNlgResult
+CateNluResult   RestaurantNluResult
+CateRequestData RestaurantRequestData
+CateServer  RestaurantServer
+CateServerData  RestaurantServerData
+CateSlotState   RestaurantSlotState
+CateSlotType    RestaurantSlotType
+CateTagState    RestaurantTagState
+CateThreadData  RestaurantThreadData
+CateUserSession RestaurantUserSession
+vi_cate namespace_restaurant_bot
