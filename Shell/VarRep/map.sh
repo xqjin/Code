@@ -6,5 +6,5 @@ while read ori sub
 do
     echo $ori
     echo $sub
-    find include/ src -name "*.h" -o -name "*.cpp" | xargs sed -i 's/\<$ori\>/$sub/g'
+    find include/ src -name "*.h" -o -name "*.cpp" | xargs sed -i "s/\<$ori\>/$sub/g"
 done < map
