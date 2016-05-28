@@ -1,0 +1,8 @@
+Host *
+ControlMaster auto
+ControlPath ~/.ssh/master-%r@%h:%p
+ControlPersist yes
+
+Host baidu
+hostname relay01.baidu.com
+user jinxiaoqiang

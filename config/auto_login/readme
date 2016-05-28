@@ -1,0 +1,9 @@
+This is a config of iterm2 && ssh && expect && luit
+which is used to auto login in the server
+
+This is very hard way to get the tool run correctly!
+
+local: utf8
+server: gb18030
+
+ssh simply takes the local's setting as the text coding
