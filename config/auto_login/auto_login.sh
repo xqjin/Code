@@ -1,4 +1,11 @@
 #!/usr/bin/expect
+#trap sigwinch spawned
+trap {
+    set rows [stty rows]
+    set cols [stty columns]
+    stty rows $rows columns $cols < $spawn_out(slave,name)
+} WINCH
+
 if { $argc != 2 } {
     send_user "Usage: user@host passwd\n"
     exit
@@ -11,6 +18,7 @@ spawn /usr/local/bin/luit -encoding gb18030 ssh baidu
 expect "*ssl*" {send "ssh $user_host \r"}
 expect "*password:*"
 send "$passwd\r"
+expect -re "$"
 
 #fconfigure stdout -encoding ascii
 #fconfigure stdout -encoding cp936
