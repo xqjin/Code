@@ -1,0 +1,16 @@
+This is readme file:
+    这个demo展示了，如何使用jsoncpp的静态库和动态库；
+
+
+----|
+    |
+    makefile
+    |
+    main.cpp
+    |
+    json-cpp
+    |
+    |------include
+            |-------json
+    |------lib
+
