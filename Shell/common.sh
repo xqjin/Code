@@ -1,13 +1,13 @@
 # paste [-s] [-d <separetor>] [--help]
 # -s:  col-contate
 # example
-# paste -d '*' 1.txt 2.txt > res.txt
+paste -d '*' 1.txt 2.txt > res.txt
 
-# hostname 
 # output the hostname of the server
+hostname 
 
-# host hostname 
 # show the IP of the host
+host hostname 
 
 # here document
 (
