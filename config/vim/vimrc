@@ -1,0 +1,26 @@
+"show the number of the file
+set nu
+
+"replace tab with the space
+set ts=4
+set expandtab
+
+"set auto indent
+set autoindent
+
+"set shiftwidth
+set shiftwidth=4
+
+"set syntax auto hight
+syntax on
+
+"set taglist
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+
+"set winmananger
+let g:winManagerWindowLayout='FileExplorer|TagList'
+let g:winManagerWidth = 30
+map wf :FirstExplorerWindow<cr>
+map wb :BottomExplorerWindow<cr> 
+nmap wm :WMToggle<CR> 
