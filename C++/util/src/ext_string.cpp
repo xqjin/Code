@@ -21,4 +21,3 @@ int splitString(
     }
     return 0;
 }
-
