@@ -5,21 +5,21 @@ import sys
 import commands
 
 
-def function1():
-    re_num = os.system('ls')
+def function1(command):
+    re_num = os.system(command)
     return re_num
-def function2():
-    re_val = os.popen('ls -a')
 
-def function3():
-    (status, output) = commands.getstatusoutput("ls")
+def function2(command):
+    re_val = os.popen(command)
+
+def function3(command):
+    (status, output) = commands.getstatusoutput(command)
     print status, output
-    
-
 
 if __name__ == "__main__":
-    #function1()
-    #function2()
-    function3()
+    command = "ls | wc -l"
+    #function1(command)
+    function2(command)
+    #function3(command)
 
 
