@@ -80,7 +80,6 @@ def getHtmlDemo():
         print req.headers
         print req.text
         """
-
         """
         # demo of post and data
         payload = {"key1":"value1", "key2":"value2"}  # key-value pair will be save in form data
@@ -131,10 +130,9 @@ def getHtmlDemo():
         req = requests.request("POST", "http://python123.io/ws", files=fs)
         """
 
-        """
-        pxs = {"http": "http://user:pass@10.10.10.1:1234", "https": "https://10.10.10.1:4321"}
+        pxs = {"http": "http://dev-proxy.oa.com:8080", "https": "https://dev-proxy.oa.com:8080"}
         req = requests.request("GET", "https://www.baidu.com", proxies = pxs)
-        """
+        print req.headers
         print >> sys.stdout, "lec1"    
     except Exception, e:
         print >> sys.stderr, "sys.stderr: ", e
